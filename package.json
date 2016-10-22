@@ -1,0 +1,29 @@
+{
+  "name": "lastfm-scrobbler",
+  "main": "./lib/lastfm-scrobbler",
+  "version": "0.0.1",
+  "description": "Allow you to scrobble your music in Cantik",
+  "repository": "https://github.com/Cantik-Music-Player/lastfm-scrobbler",
+  "license": "MIT",
+  "engines": {
+    "cantik": "*"
+  },
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script/register spec",
+    "coverage": "istanbul cover _mocha -- --recursive --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul spec"
+  },
+  "consumedServices": {
+    "player": "^0.0.1",
+    "settings": "^0.0.1"
+  },
+  "dependencies": {
+    "simple-lastfm": "^1.0.5"
+  },
+  "devDependencies": {
+    "coffee-coverage": "^1.0.1",
+    "istanbul": "^0.4.3",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.3",
+    "coveralls": "^2.11.9"
+  }
+}
